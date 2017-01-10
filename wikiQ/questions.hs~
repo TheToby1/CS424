@@ -40,5 +40,9 @@ isPalindrome (xs) = (reverse xs) == xs
 --rest (x:xs) y | x == y = rest xs y
 --              | otherwise = [x] ++ rest xs x
 compress :: (Eq a) => [a] -> [a]
-compress (xs) = map head . group
+compress (xs) = map head (group xs)
 
+--Q9
+pack :: Eq a => [a]->[[a]]
+pack (x:xs) | x==head xs = [[x] ]
+            | otherwise 
