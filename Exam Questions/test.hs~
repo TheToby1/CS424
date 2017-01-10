@@ -1,0 +1,5 @@
+triple :: a->b->c->(a->b->c->d)->d
+triple x y z w = w x y z
+
+fist :: (a->b->c->d) -> a -> b -> c -> a
+fist w x y z = x

@@ -1,0 +1,7 @@
+#lang racket
+(define deep-fetch
+  (λ (f xs) 
+    (cond 
+      ((null? (cdr xs)) (cond
+                          ((list? (car xs)) (deep-fetch (car xs)))
+                          (else if (f (car xs)) 

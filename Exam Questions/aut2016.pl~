@@ -1,0 +1,8 @@
+tr([[]|_], []).
+tr(Ms, [Ts|Tss]) :-
+        lists_firsts_rests(Ms, Ts, Ms1),
+        tr(Ms1, Tss).
+
+first_rest([], [], []).
+first_rests([[F|Os]|Rest], [F|Fs], [Os|Oss]) :-
+        lists_firsts_rests(Rest, Fs, Oss).

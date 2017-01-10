@@ -1,0 +1,11 @@
+(a) (λx. x x)
+
+Γ, x:σ ` x : σ → τ Γ, x:σ ` x : σ
+--------------------
+Γ, x:σ ` x x : τ
+--------------------
+Γ ` (λx:σ. x x) : σ → τ
+
+
+x is of type x:σ and x : σ → τ.
+But types are unique. Cannot have σ = σ → τ as no type expression can be a sub expression of itself.

@@ -1,0 +1,10 @@
+(Q5)
+triple = λ x:a.λ y:b.λ z:c.λ w.w x y z:a->b->c->(a->b->c->d)
+fst = λ t.t(λ x.λ y.λ z.x)
+snd = λ t.t(λ x.λ y.λ z.y)
+thd = λ t.t(λ x.λ y.λ z.z)
+
+triple:(a->b->c)->a->b->c
+fst:
+snd:
+thd:
